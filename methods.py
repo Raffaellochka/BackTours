@@ -54,7 +54,7 @@ def get_medim_tasks(db: Session):
     coms = db.query(models.CompletedTask).all()
     return schemas.MediumTaskView(value=(len(coms) // len(parts)))
 
-# вывод среднего призового фонда (вывести на главной страние перед таблицей турниров)
+# вывод среднего призового фонда (вывести на главной странице перед таблицей турниров)
 def get_medim_prize(db: Session):
     tours = db.query(models.Tournaments).all()
     sum1 = 0
